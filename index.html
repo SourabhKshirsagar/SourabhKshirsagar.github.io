@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sourabh Kshirsagar — Java Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0b1f;--glass:rgba(255,255,255,.06);--text:#eef0ff;--muted:#a3a8cf;--line:rgba(255,255,255,.12);--g1:#7c3aed;--g2:#ec4899;--g3:#f59e0b;--g4:#22d3ee;--grad:linear-gradient(120deg,#22d3ee 0%,#8b5cf6 40%,#ec4899 75%,#f59e0b 100%);--glow:rgba(139,92,246,.45);--serif:"Space Grotesk",system-ui,"Segoe UI",sans-serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f4ff;--glass:rgba(255,255,255,.75);--text:#171634;--muted:#5b5f86;--line:rgba(80,60,160,.16);--glow:rgba(139,92,246,.28)}}
+:root[data-theme="light"]{--bg:#f6f4ff;--glass:rgba(255,255,255,.75);--text:#171634;--muted:#5b5f86;--line:rgba(80,60,160,.16);--glow:rgba(139,92,246,.28)}
+:root[data-theme="dark"]{--bg:#0a0b1f;--glass:rgba(255,255,255,.06);--text:#eef0ff;--muted:#a3a8cf;--line:rgba(255,255,255,.12);--glow:rgba(139,92,246,.45)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);font:16px/1.65 var(--sans);background:radial-gradient(60% 50% at 8% 0%,rgba(34,211,238,.22),transparent 60%),radial-gradient(55% 45% at 100% 10%,rgba(236,72,153,.22),transparent 60%),radial-gradient(60% 50% at 70% 100%,rgba(124,58,237,.25),transparent 60%),var(--bg);background-attachment:fixed}
+a{color:inherit}
+.wrap{display:grid;grid-template-columns:320px 1fr;min-height:100%;max-width:1180px;margin:0 auto}
+aside{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;height:100vh;padding:56px 36px;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.avatar{width:72px;height:72px;border-radius:22px;background:var(--grad);color:#fff;display:grid;place-items:center;font:700 26px var(--serif);margin-bottom:22px;box-shadow:0 0 34px var(--glow),0 8px 24px rgba(0,0,0,.25)}
+aside h1{font:700 32px/1.12 var(--serif);margin:0 0 10px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-weight:600;margin:0 0 6px}
+.loc{color:var(--muted);font-size:14px;margin:0 0 28px}
+nav a{display:block;text-decoration:none;color:var(--muted);padding:7px 0 7px 14px;font-size:15px;font-weight:500;border-left:2px solid var(--line);transition:.2s}
+nav a:hover{color:var(--text);border-left-color:var(--g2);padding-left:20px}
+.contact{margin-top:auto;font-size:14px;color:var(--muted);display:grid;gap:6px}
+.contact a{text-decoration:none;word-break:break-all}.contact a:hover{color:var(--g4)}
+main{padding:56px 48px 80px;min-width:0}
+section{margin-bottom:64px}
+h2{font:700 13px var(--sans);letter-spacing:.16em;text-transform:uppercase;margin:0 0 24px;display:flex;align-items:center;gap:14px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--g1),transparent)}
+.lead{font:600 clamp(24px,3.4vw,34px)/1.3 var(--serif);margin:0 0 18px}
+.lead em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.muted{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:26px}
+.fact{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 8px 30px -12px var(--glow)}
+.fact b{display:block;font:700 30px var(--serif);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}.fact span{font-size:13px;color:var(--muted)}
+.job{position:relative;padding:0 0 32px 28px;border-left:2px solid transparent;border-image:linear-gradient(180deg,var(--g4),var(--g1),var(--g2),transparent) 1}
+.job::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:0 0 14px var(--g2)}
+.job h3{font:700 21px var(--serif);margin:0}
+.job .at{color:var(--muted);font-size:14px;margin:2px 0 10px}
+.job ul{margin:0;padding-left:18px}.job li{margin:6px 0}
+.work{display:grid;grid-template-columns:56px 1fr;gap:6px 16px;padding:22px 20px;margin-bottom:14px;background:var(--glass);border:1px solid var(--line);border-radius:18px;transition:.25s}
+.work:hover{transform:translateY(-3px);border-color:var(--g1);box-shadow:0 14px 40px -14px var(--glow)}
+.num{font:700 26px var(--serif);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.work h3{font:700 20px var(--serif);margin:0}
+.work p{margin:6px 0 12px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font-size:12.5px;font-weight:500;border:1px solid var(--line);background:linear-gradient(120deg,rgba(34,211,238,.14),rgba(236,72,153,.14));border-radius:999px;padding:3px 12px}
+.row{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:14px 4px;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row dt{font-weight:700}.row dd{margin:0;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.two>div{background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:22px}
+.two h3{font:700 18px var(--serif);margin:0 0 8px}
+.two ul{padding-left:18px;margin:0}.two li{margin:6px 0}
+.btn{display:inline-block;background:var(--grad);color:#fff;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:12px;margin:6px 10px 0 0;box-shadow:0 8px 26px -6px var(--glow);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px -4px var(--g2)}
+.btn.alt{background:var(--glass);color:var(--text);border:1px solid var(--line);box-shadow:none}
+.btn.alt:hover{border-color:var(--g4)}
+footer{color:var(--muted);font-size:13px}
+@media (max-width:860px){
+.wrap{display:block}
+aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:36px 22px 24px}
+nav{display:flex;gap:6px 16px;flex-wrap:wrap}nav a{border:0;padding:4px 0}nav a:hover{padding-left:0}
+.contact{margin-top:20px}
+main{padding:36px 22px 60px}
+.two{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:2px}.work{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+<div class="avatar">SK</div>
+<h1>Sourabh Kshirsagar</h1>
+<p class="role">Software Engineer · Java</p>
+<p class="loc">India</p>
+<nav>
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Selected work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+<div class="contact">
+<a href="mailto:sourabhkshirsagar5500@gmail.com">sourabhkshirsagar5500@gmail.com</a>
+<a href="tel:+917611131931">+91-7611131931</a>
+<a href="https://linkedin.com/in/sourabh-kshirsagar">LinkedIn</a>
+<a href="https://github.com/SourabhKshirsagar">GitHub</a>
+</div>
+</aside>
+
+<main>
+<section id="about">
+<h2>About</h2>
+<p class="lead">I build and maintain <em>enterprise Java applications</em> that dealers across Canada rely on every day.</p>
+<p class="muted">Software engineer at LTIMindtree, working on Honda Canada's eBiz dealer platform with Java, Spring Boot, Angular and REST APIs. I also build full-stack projects with Spring Boot and the MERN stack, with a focus on security, consistency and maintainable code.</p>
+<div class="facts">
+<div class="fact"><b>100+</b><span>applications supported</span></div>
+<div class="fact"><b>200+</b><span>LeetCode problems</span></div>
+<div class="fact"><b>8.72</b><span>B.Tech CGPA</span></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="job">
+<h3>Software Engineer, Java Development</h3>
+<div class="at">LTIMindtree · Honda Canada Manufacturing, Dealer Service Platform · Feb 2025 – Present</div>
+<ul>
+<li>Developed and maintained <b>eBiz</b>, the dealer service platform, using Java, Spring Boot, Angular and RESTful APIs, supporting 100+ applications used by dealers across Canada.</li>
+<li>Resolved a platform-wide character-encoding defect that corrupted French-language text, restoring accurate content for French-speaking dealers.</li>
+<li>Fixed multiple security vulnerabilities, including weak input validation and cross-site scripting (XSS) flaws.</li>
+<li>Delivered Angular front-end enhancements that improved UI consistency and user experience.</li>
+</ul>
+</div>
+<div class="job">
+<h3>Software Engineer Intern, Orchard Program</h3>
+<div class="at">LTIMindtree · Feb 2025 – May 2025</div>
+<ul><li>Completed Java full-stack training covering Spring Boot, REST APIs, Angular and MySQL, and built SmartMart as the program project.</li></ul>
+</div>
+<div class="job">
+<h3>Persistent Martian Internship Program</h3>
+<div class="at">Persistent Systems · Nov 2023</div>
+<ul><li>Hands-on training in Java, Linux, DBMS and computer networking fundamentals.</li></ul>
+</div>
+</section>
+
+<section id="work">
+<h2>Selected work</h2>
+<div class="work"><div class="num">01</div><div>
+<h3>SmartMart</h3>
+<p>Full-stack web application with buyer and seller dashboards. JWT authentication and Spring Security provide role-level access control across all REST API endpoints.</p>
+<div class="chips"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>Angular</span><span>MySQL</span></div></div></div>
+<div class="work"><div class="num">02</div><div>
+<h3>Art-United</h3>
+<p>MERN platform where artists showcase and manage their artwork, with secure authentication, RESTful CRUD APIs, an interactive comment system and a responsive UI.</p>
+<div class="chips"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Bootstrap</span></div></div></div>
+<div class="work"><div class="num">03</div><div>
+<h3>Yum Yard</h3>
+<p>Freelance food-delivery app for a local restaurant, with user and admin role-based authentication and an admin panel to manage orders, restaurants and delivery personnel.</p>
+<div class="chips"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div></div></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<dl style="margin:0">
+<div class="row"><dt>Languages</dt><dd>Java, JavaScript, C++ (basics)</dd></div>
+<div class="row"><dt>Frameworks</dt><dd>Spring Boot, Angular, React, HTML5, CSS3</dd></div>
+<div class="row"><dt>Databases</dt><dd>MySQL, SQL, IBM DB2, MongoDB, DBMS</dd></div>
+<div class="row"><dt>CI/CD</dt><dd>Jenkins, CloudBees CI</dd></div>
+<div class="row"><dt>Tools</dt><dd>Postman, DBeaver, Jira, Git, GitHub, VS Code, PuTTY, GitHub Copilot, Agile/Scrum</dd></div>
+</dl>
+</section>
+
+<section id="education">
+<h2>Education &amp; achievements</h2>
+<div class="two">
+<div><h3>Education</h3><ul>
+<li>B.Tech, Lakshmi Narain College of Technology Excellence (CGPA 8.72)</li>
+<li>Class X 89% · Class XII 81%, Vaidik Convent Higher Secondary School</li></ul></div>
+<div><h3>Achievements</h3><ul>
+<li>Smart India Hackathon 2022: led a team effort on an E-Waste Management System.</li>
+<li>200+ problems solved on LeetCode.</li>
+<li>Certified in C++, Java and DSA (Udemy).</li></ul></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p class="lead">Open to Java backend and <em>full-stack</em> roles.</p>
+<a class="btn" href="mailto:sourabhkshirsagar5500@gmail.com">Email me</a>
+<a class="btn alt" href="https://linkedin.com/in/sourabh-kshirsagar">LinkedIn</a>
+<a class="btn alt" href="https://github.com/SourabhKshirsagar">GitHub</a>
+</section>
+<footer>© Sourabh Kshirsagar</footer>
+</main>
+</div>
+</body>
+</html>
